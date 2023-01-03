@@ -1,0 +1,20 @@
+body{
+  background-color: rgba(218, 218, 218, 0.776);
+}
+
+.container-fluid{
+  margin: auto;
+  margin-top: 30px;
+  height: 730px;
+  width: 1200px;
+  border: 2px solid black;
+}
+
+.solapa{
+  height: 728px;
+  width: 300px;
+  background-color: red;
+  position: relative;
+  right: 13px;
+  bottom: 1px;
+}
