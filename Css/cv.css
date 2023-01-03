@@ -6,15 +6,24 @@ body{
   margin: auto;
   margin-top: 30px;
   height: 730px;
-  width: 1200px;
+  width: 1000px;
   border: 2px solid black;
 }
 
 .solapa{
   height: 728px;
-  width: 300px;
-  background-color: red;
+  width: 250px;
+  background-color: skyblue;
   position: relative;
   right: 13px;
   bottom: 1px;
+}
+
+.img{
+  width: 180px;
+  height: 180px;
+  border-radius: 150px;
+  position: absolute;
+  top: 40px;
+  left: 35px;
 }
