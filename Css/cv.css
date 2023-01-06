@@ -27,3 +27,17 @@ body{
   top: 40px;
   left: 35px;
 }
+
+.datos{
+  top: 245px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ul{
+  list-style-type: circle;
+}
+
+.link{
+  text-decoration: none;
+  color: black;
+}
