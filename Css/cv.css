@@ -12,11 +12,12 @@ body{
 
 .solapa{
   height: 200px;
-  width: 998px;
+  width: 997px;
   background-color: skyblue;
   position: relative;
   right: 13px;
-  bottom: 1px;
+  margin-left: 1px;
+  border-bottom: 2px solid black;
 }
 
 .img{
@@ -29,7 +30,7 @@ body{
 }
 
 .nombre{
-  height: 200px;
+  height: 210px;
   width: 250px;
   position: absolute;
   margin-left: 225px;
@@ -47,4 +48,22 @@ body{
   text-decoration: none;
   color: black;
   margin-left: 5px;
+}
+
+.cuerpo{
+  position: relative;
+  width: 998px;
+  height: 527px;
+  right: 11px;
+}
+
+.info-pers{
+  width: 7%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.ref{
+  text-decoration: none;
+  color: black;
 }
