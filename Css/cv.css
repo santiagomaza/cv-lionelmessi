@@ -5,14 +5,14 @@ body{
 .container-fluid{
   margin: auto;
   margin-top: 30px;
-  height: 730px;
+  height: 1700px;
   width: 1000px;
   border: 2px solid black;
 }
 
 .solapa{
   height: 200px;
-  width: 997px;
+  width: 998px;
   background-color: skyblue;
   position: relative;
   right: 13px;
@@ -53,11 +53,11 @@ body{
 .cuerpo{
   position: relative;
   width: 998px;
-  height: 527px;
+  height: 1390px;
   right: 11px;
 }
 
-.info-pers{
+.categorias{
   width: 7%;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
