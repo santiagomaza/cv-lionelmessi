@@ -1,14 +1,105 @@
-const agregarInfo = () => {
-  const infoAgregar = document.getElementById('info-a-agregar').value;
-  const pagRef = document.getElementById('pag-ref').value;
-  const datoImportante = document.getElementById('dato-imp').value;
-  const infoCompl = document.getElementById('infoComplementaria').value;
+const mostrarForm = () => {
+  const selecCat = document.getElementById('catCV');
+
+  if("infPers" == selecCat.value){
+    document.getElementById('inputs').innerHTML = `
+   <form class="row g-3 needs-validation" novalidate>  
+    <div class="col-md-12">
+        <label for="exampleFormControlTextarea1" class="form-label">Información a agregar</label>
+        <textarea class="form-control" id="info-a-agregar" rows="2" required></textarea>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+      <div class="invalid-feedback">Complete este campo por favor</div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationCustom01" class="form-label">Página de referencia</label>
+      <input autocomplete="off" type="text" class="form-control" id="pag-ref">
+    </div>
+    <div class="col-md-6">
+      <label for="exampleFormControlTextarea2" class="form-label">Informacion a agregar</label>
+      <textarea class="form-control" autocomplete="off" id="infoComplementaria" rows="1" required></textarea>
+    </div>
+    <div class="col-md-12">
+      <label for="validationCustom01" class="form-label">Dato a resaltar (Si es que es relevante)</label>
+      <input autocomplete="off" type="text" class="form-control w-25" id="dato-imp">
+    </div>
+    <div class="modal-footer mt-3">
+      <button type="submit" class="btn btn-success" onclick="agregarInfo()">Agregar Información</button>
+      <button type="reset" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+    </div> 
+   </form>
+    `
+  }
+  else if("exp" == selecCat.value){
+    document.getElementById('inputs').innerHTML = `
+    <form class="row g-3 needs-validation" novalidate>  
+     <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">Club</label>
+      <select class="form-select">
+       <option selected disabled value=""></option>
+       <option>Barcelona</option>
+       <option>Paris Saint-Germain</option>
+       <option>Selección Argentina</option>
+      </select>    
+     </div>
+     <div class="col-md-12">
+        <label for="exampleFormControlTextarea1" class="form-label">Información a agregar</label>
+        <textarea class="form-control" id="info-a-agregarClub" rows="2" required></textarea>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+      <div class="invalid-feedback">Complete este campo por favor</div>
+     </div>
+     <div class="col-md-6">
+      <label for="validationCustom01" class="form-label">Página de referencia</label>
+      <input autocomplete="off" type="text" class="form-control" id="pag-refClub">
+     </div>
+     <div class="col-md-6">
+       <label for="validateCustom01" class="form-label">Info a agregar</label>
+       <textarea class="form-control" autocomplete="off" id="infoComplementariaClub" rows="1" required></textarea>
+     </div>
+     <div class="col-md-12">
+      <label for="validationCustom01" class="form-label">Dato a resaltar (Si es que es relevante)</label>
+      <input autocomplete="off" type="text" class="form-control w-25" id="dato-impClub">
+    </div>
+     <div class="modal-footer mt-3">
+      <button type="submit" class="btn btn-success" onclick="agregarInfoExp()">Agregar Información</button>
+      <button type="reset" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+     </div> 
+    </form>
+    `
+  }
+  else{
+    document.getElementById('inputs').innerHTML = `
+     <form class="row g-3 needs-validation" novalidate>
+       <div class="col-md-12">
+         <label for="validationCustom01" class="form-label">Ingresar la habilidad</label>
+         <input autocomplete="off" type="text" class="form-control" id="ingHab" required>
+         <div class="invalid-feedback">
+           Complete este campo por favor
+         </div>
+       </div>
+       <div class="modal-footer mt-3">
+         <button type="submit" class="btn btn-success" onclick="agregarHab()">Agregar habilidad</button>
+         <button type="reset" class="btn btn-danger" data-bs-dismiss="modal" data-bs-target="#exampleModal" aria-label="Close">Cerrar</button>
+       </div>   
+     </form>
+    `
+  }
+}
+
+const agregarInfoExp = () => {
+  const infoAgregar = document.getElementById('info-a-agregarClub').value;
+  const pagRef = document.getElementById('pag-refClub').value;
+  const datoImportante = document.getElementById('dato-impClub').value;
+  const infoCompl = document.getElementById('infoComplementariaClub').value;
   
   if(infoAgregar == "") {
     return false
   }
 
-  fetch('http://localhost:3000/experiencias/', {
+  fetch('http://localhost:3000/experiencias', {
     method: 'POST',
     body: JSON.stringify({
       infoAgregar,
@@ -22,10 +113,8 @@ const agregarInfo = () => {
   });
 }
 
-console.log(agregarInfo())
-
 const obtenerListaExp = async() => {
-  const resultados = await fetch('http://localhost:3000/experiencias/');
+  const resultados = await fetch('http://localhost:3000/experiencias');
   const listaExp = await resultados.json();
   return listaExp;
 }
@@ -45,3 +134,62 @@ const listaExp = async () => {
 }
 
 listaExp()
+
+
+const agregarHab = () => {
+  const habilidades = document.getElementById('ingHab').value;
+
+  if(habilidades == "") {
+    return false
+  }
+
+  fetch('http://localhost:3000/habilidades', {
+    method: 'POST',
+    body: JSON.stringify({
+      habilidades
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  });
+}
+
+const obtenerListaHab = async() => {
+  const resultados = await fetch('http://localhost:3000/habilidades');
+  const listaHab = await resultados.json();
+  return listaHab;
+}
+
+const listaHab = async () => {
+  const lista = await obtenerListaHab();
+  const listaHab = document.getElementById('listaHab');
+  
+  
+  const habilidades = lista.map((habilidad) => `  
+    <li>${habilidad.habilidades}</li>
+    `
+  );
+
+  listaHab.innerHTML = habilidades.join("");
+}
+
+listaHab()
+
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
