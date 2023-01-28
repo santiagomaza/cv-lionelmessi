@@ -34,15 +34,6 @@ const mostrarForm = () => {
   else if("exp" == selecCat.value){
     document.getElementById('inputs').innerHTML = `
     <form class="row g-3 needs-validation" novalidate>  
-     <div class="col-md-4">
-      <label for="validationCustom01" class="form-label">Club</label>
-      <select class="form-select">
-       <option selected disabled value=""></option>
-       <option>Barcelona</option>
-       <option>Paris Saint-Germain</option>
-       <option>Selección Argentina</option>
-      </select>    
-     </div>
      <div class="col-md-12">
         <label for="exampleFormControlTextarea1" class="form-label">Información a agregar</label>
         <textarea class="form-control" id="info-a-agregarClub" rows="2" required></textarea>
@@ -64,7 +55,7 @@ const mostrarForm = () => {
       <input autocomplete="off" type="text" class="form-control w-25" id="dato-impClub">
     </div>
      <div class="modal-footer mt-3">
-      <button type="submit" class="btn btn-success" onclick="agregarInfoExp()">Agregar Información</button>
+      <button type="submit" class="btn btn-success" onclick="agregarInfoExp()">Agregar Experiencia</button>
       <button type="reset" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
      </div> 
     </form>
@@ -81,7 +72,7 @@ const mostrarForm = () => {
          </div>
        </div>
        <div class="modal-footer mt-3">
-         <button type="submit" class="btn btn-success" onclick="agregarHab()">Agregar habilidad</button>
+         <button type="submit" class="btn btn-success" onclick="agregarHab()">Agregar Habilidad</button>
          <button type="reset" class="btn btn-danger" data-bs-dismiss="modal" data-bs-target="#exampleModal" aria-label="Close">Cerrar</button>
        </div>   
      </form>
@@ -95,10 +86,10 @@ const agregarInfoExp = () => {
   const datoImportante = document.getElementById('dato-impClub').value;
   const infoCompl = document.getElementById('infoComplementariaClub').value;
   
-  if(infoAgregar == "") {
+  if(infoAgregar == "" || infoCompl == "") {
     return false
   }
-
+  
   fetch('http://localhost:3000/experiencias', {
     method: 'POST',
     body: JSON.stringify({
@@ -120,33 +111,46 @@ const obtenerListaExp = async() => {
 }
 
 
-const listaExp = async () => {
+const listaExpBarc = async () => {
   const lista = await obtenerListaExp();
   const listaExpBarc = document.getElementById('listaExpBarc');
-  
-  
-  const experiencias = lista.map((experiencia) => `  
-    <li>${experiencia.infoAgregar}<a href="${experiencia.pagRef}" target="_blank" class="ref fw-bold"> ${experiencia.infoCompl} </a><strong> ${experiencia.datoImportante} </strong></li>
+ 
+  const clubExpBarc = lista.map((experienciaBarc) => `  
+    <li>${experienciaBarc.infoAgregar}<a href="${experienciaBarc.pagRef}" target="_blank" class="ref fw-bold"> ${experienciaBarc.infoCompl} </a><strong> ${experienciaBarc.datoImportante} </strong></li>
     `
   );
 
-  listaExpBarc.innerHTML = experiencias.join("");
+  listaExpBarc.innerHTML = clubExpBarc.join("");
 }
 
-listaExp()
+listaExpBarc()
 
+const listaExpPsg = async () => {
+  const lista = await obtenerListaExp();
+  const listaExpPsg = document.getElementById('listaExpPsg');
+
+ 
+  const clubExpPsg = lista.map((experienciaPsg) => `  
+    <li>${experienciaPsg.infoAgregar}<a href="${experienciaPsg.pagRef}" target="_blank" class="ref fw-bold"> ${experienciaPsg.infoCompl} </a><strong> ${experienciaPsg.datoImportante} </strong></li>
+    `
+  );
+
+  listaExpPsg.innerHTML = clubExpPsg.join("");
+}
+
+listaExpPsg()
 
 const agregarHab = () => {
-  const habilidades = document.getElementById('ingHab').value;
+  const habilidad = document.getElementById('ingHab').value;
 
-  if(habilidades == "") {
+  if(habilidad == "") {
     return false
   }
 
   fetch('http://localhost:3000/habilidades', {
     method: 'POST',
     body: JSON.stringify({
-      habilidades
+      habilidad
     }),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
@@ -166,7 +170,7 @@ const listaHab = async () => {
   
   
   const habilidades = lista.map((habilidad) => `  
-    <li>${habilidad.habilidades}</li>
+    <li>${habilidad.habilidad}</li>
     `
   );
 
@@ -174,22 +178,3 @@ const listaHab = async () => {
 }
 
 listaHab()
-
-(() => {
-  'use strict'
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
-
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
