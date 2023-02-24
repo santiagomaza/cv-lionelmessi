@@ -1,8 +1,37 @@
 {
   "barcelona": [
-   
+    {
+      "infoAgregar": "d´wqkop",
+      "pagRef": "sdqw",
+      "datoImportante": "w",
+      "infoCompl": "sf",
+      "id": 1
+    }
   ],
-  "psg": [],
-  "argentina": [],
+  "psg": [
+    {
+      "infoAgregar": "{as,d",
+      "pagRef": "pwqkdqp",
+      "datoImportante": "11",
+      "infoCompl": " ksc",
+      "id": 1
+    },
+    {
+      "infoAgregar": "qwdmp",
+      "pagRef": "ef",
+      "datoImportante": "sds",
+      "infoCompl": "242",
+      "id": 2
+    }
+  ],
+  "argentina": [
+    {
+      "infoAgregar": "kasdjsapo",
+      "pagRef": "dksal1",
+      "datoImportante": "313",
+      "infoCompl": "klsdm",
+      "id": 1
+    }
+  ],
   "habilidades": {}
 }

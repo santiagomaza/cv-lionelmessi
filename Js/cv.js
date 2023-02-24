@@ -156,7 +156,7 @@ const expClubesOpc = () => {
       <input autocomplete="off" type="text" class="form-control w-25" id="dato-impClub">
      </div>
      <div class="modal-footer mt-3">
-      <button type="submit" class="btn btn-success" onclick="agregarInfoExpArg()">Agregar Experiencia</button>
+      <button type="submit" class="btn btn-success" onclick="agregarInfoExpArgentina()">Agregar Experiencia</button>
       <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
      </div> 
     </form>
