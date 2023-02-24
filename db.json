@@ -1,19 +1,8 @@
 {
-  "experiencias": [
-    {
-      "infoAgregar": "dsf",
-      "pagRef": "sd",
-      "datoImportante": "as",
-      "infoCompl": "d",
-      "id": 1
-    },
-    {
-      "infoAgregar": "sds",
-      "pagRef": "a",
-      "datoImportante": "as",
-      "infoCompl": "sf",
-      "id": 2
-    }
+  "barcelona": [
+   
   ],
-  "habilidades": []
+  "psg": [],
+  "argentina": [],
+  "habilidades": {}
 }

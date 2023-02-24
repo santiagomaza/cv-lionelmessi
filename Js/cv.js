@@ -26,39 +26,25 @@ const mostrarForm = () => {
     </div>
     <div class="modal-footer mt-3">
       <button type="submit" class="btn btn-success" onclick="agregarInfo()">Agregar Información</button>
-      <button type="reset" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
     </div> 
    </form>
     `
   }
   else if("exp" == selecCat.value){
     document.getElementById('inputs').innerHTML = `
-    <form class="row g-3 needs-validation" novalidate>  
-     <div class="col-md-12">
-        <label for="exampleFormControlTextarea1" class="form-label">Información a agregar</label>
-        <textarea class="form-control" id="info-a-agregarClub" rows="2" required></textarea>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
-      <div class="invalid-feedback">Complete este campo por favor</div>
-     </div>
+    <form class="row g-3 needs-validation" novalidate>
      <div class="col-md-6">
-      <label for="validationCustom01" class="form-label">Página de referencia</label>
-      <input autocomplete="off" type="text" class="form-control" id="pag-refClub">
+      <label for="validationCustom01" class="form-label">Club / Selección</label>
+      <select class="form-select" id="expCV" onchange="expClubesOpc()" required>
+        <option selected disabled value="">Elegir club / selección</option>
+        <option value="Barc">F.C. Barcelona</option>
+        <option value="Psg">Paris Saint-Germain</option>
+        <option value="Arg">Selección Argentina</option>
+      </select>
      </div>
-     <div class="col-md-6">
-       <label for="validateCustom01" class="form-label">Info a agregar</label>
-       <textarea class="form-control" autocomplete="off" id="infoComplementariaClub" rows="1" required></textarea>
-     </div>
-     <div class="col-md-12">
-      <label for="validationCustom01" class="form-label">Dato a resaltar (Si es que es relevante)</label>
-      <input autocomplete="off" type="text" class="form-control w-25" id="dato-impClub">
-    </div>
-     <div class="modal-footer mt-3">
-      <button type="submit" class="btn btn-success" onclick="agregarInfoExp()">Agregar Experiencia</button>
-      <button type="reset" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-     </div> 
     </form>
+    <div id="inputs2" class="row g-3 d-flex"></div>
     `
   }
   else{
@@ -80,65 +66,104 @@ const mostrarForm = () => {
   }
 }
 
-const agregarInfoExp = () => {
-  const infoAgregar = document.getElementById('info-a-agregarClub').value;
-  const pagRef = document.getElementById('pag-refClub').value;
-  const datoImportante = document.getElementById('dato-impClub').value;
-  const infoCompl = document.getElementById('infoComplementariaClub').value;
-  
-  if(infoAgregar == "" || infoCompl == "") {
-    return false
+const expClubesOpc = () => {
+  const expCV = document.getElementById('expCV');
+
+  if ("Barc" == expCV.value){
+    document.getElementById('inputs2').innerHTML = `
+    <span class="my-3 fw-bold">Agregar experiencia al club F.C. Barcelona</span>
+    <form class="row g-3 needs-validation" novalidate>
+     <div class="col-md-12">
+      <label for="exampleFormControlTextarea1" class="form-label">Información a agregar</label>
+      <textarea class="form-control" id="info-a-agregarClub" rows="2" required></textarea>
+     <div class="valid-feedback">
+       Looks good!
+     </div>
+      <div class="invalid-feedback">Complete este campo por favor</div>
+     </div>
+     <div class="col-md-6">
+      <label for="validationCustom01" class="form-label">Página de referencia</label>
+      <input autocomplete="off" type="text" class="form-control" id="pag-refClub">
+     </div>
+     <div class="col-md-6">
+      <label for="validateCustom01" class="form-label">Info a agregar</label>
+      <textarea class="form-control" autocomplete="off" id="infoComplementariaClub" rows="1" required></textarea>
+     </div>
+     <div class="col-md-12">
+      <label for="validationCustom01" class="form-label">Dato a resaltar (Si es que es relevante)</label>
+      <input autocomplete="off" type="text" class="form-control w-25" id="dato-impClub">
+     </div>
+     <div class="modal-footer mt-3">
+      <button type="submit" class="btn btn-success" onclick="agregarInfoExpBarc()">Agregar Experiencia</button>
+      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+     </div> 
+    </form>
+    `
   }
-  
-  fetch('http://localhost:3000/experiencias', {
-    method: 'POST',
-    body: JSON.stringify({
-      infoAgregar,
-      pagRef,
-      datoImportante,
-      infoCompl,
-    }),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  });
-}
-
-const obtenerListaExp = async() => {
-  const resultados = await fetch('http://localhost:3000/experiencias');
-  const listaExp = await resultados.json();
-  return listaExp;
-}
-
-
-const listaExpBarc = async () => {
-  const lista = await obtenerListaExp();
-  const listaExpBarc = document.getElementById('listaExpBarc');
- 
-  const clubExpBarc = lista.map((experienciaBarc) => `  
-    <li>${experienciaBarc.infoAgregar}<a href="${experienciaBarc.pagRef}" target="_blank" class="ref fw-bold"> ${experienciaBarc.infoCompl} </a><strong> ${experienciaBarc.datoImportante} </strong></li>
+  else if("Psg" == expCV.value){
+    document.getElementById('inputs2').innerHTML = `
+    <span class="my-3 fw-bold">Agregar experiencia al club Paris Saint-Germain</span>
+    <form class="row g-3 needs-validation" novalidate>
+     <div class="col-md-12">
+      <label for="exampleFormControlTextarea1" class="form-label">Información a agregar</label>
+      <textarea class="form-control" id="info-a-agregarClub" rows="2" required></textarea>
+     <div class="valid-feedback">
+       Looks good!
+     </div>
+      <div class="invalid-feedback">Complete este campo por favor</div>
+     </div>
+     <div class="col-md-6">
+      <label for="validationCustom01" class="form-label">Página de referencia</label>
+      <input autocomplete="off" type="text" class="form-control" id="pag-refClub">
+     </div>
+     <div class="col-md-6">
+      <label for="validateCustom01" class="form-label">Info a agregar</label>
+      <textarea class="form-control" autocomplete="off" id="infoComplementariaClub" rows="1" required></textarea>
+     </div>
+     <div class="col-md-12">
+      <label for="validationCustom01" class="form-label">Dato a resaltar (Si es que es relevante)</label>
+      <input autocomplete="off" type="text" class="form-control w-25" id="dato-impClub">
+     </div>
+     <div class="modal-footer mt-3">
+      <button type="submit" class="btn btn-success" onclick="agregarInfoExpPsg()">Agregar Experiencia</button>
+      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+     </div> 
+    </form>
     `
-  );
-
-  listaExpBarc.innerHTML = clubExpBarc.join("");
-}
-
-listaExpBarc()
-
-const listaExpPsg = async () => {
-  const lista = await obtenerListaExp();
-  const listaExpPsg = document.getElementById('listaExpPsg');
-
- 
-  const clubExpPsg = lista.map((experienciaPsg) => `  
-    <li>${experienciaPsg.infoAgregar}<a href="${experienciaPsg.pagRef}" target="_blank" class="ref fw-bold"> ${experienciaPsg.infoCompl} </a><strong> ${experienciaPsg.datoImportante} </strong></li>
+  }
+  else{
+    document.getElementById('inputs2').innerHTML = `
+    <span class="my-3 fw-bold">Agregar experiencia a Selección Argentina</span>
+    <form class="row g-3 needs-validation" novalidate>
+     <div class="col-md-12">
+      <label for="exampleFormControlTextarea1" class="form-label">Información a agregar</label>
+      <textarea class="form-control" id="info-a-agregarClub" rows="2" required></textarea>
+     <div class="valid-feedback">
+       Looks good!
+     </div>
+      <div class="invalid-feedback">Complete este campo por favor</div>
+     </div>
+     <div class="col-md-6">
+      <label for="validationCustom01" class="form-label">Página de referencia</label>
+      <input autocomplete="off" type="text" class="form-control" id="pag-refClub">
+     </div>
+     <div class="col-md-6">
+      <label for="validateCustom01" class="form-label">Info a agregar</label>
+      <textarea class="form-control" autocomplete="off" id="infoComplementariaClub" rows="1" required></textarea>
+     </div>
+     <div class="col-md-12">
+      <label for="validationCustom01" class="form-label">Dato a resaltar (Si es que es relevante)</label>
+      <input autocomplete="off" type="text" class="form-control w-25" id="dato-impClub">
+     </div>
+     <div class="modal-footer mt-3">
+      <button type="submit" class="btn btn-success" onclick="agregarInfoExpArg()">Agregar Experiencia</button>
+      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+     </div> 
+    </form>
     `
-  );
-
-  listaExpPsg.innerHTML = clubExpPsg.join("");
+  }
 }
 
-listaExpPsg()
 
 const agregarHab = () => {
   const habilidad = document.getElementById('ingHab').value;
