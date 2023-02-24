@@ -31,14 +31,14 @@ const obtenerListaExpArgentina = async() => {
 
 const listaExpArgentina = async () => {
   const lista = await obtenerListaExpArgentina();
-  const listaExpPsg = document.getElementById('listaExpPsg');
+  const listaExpArg = document.getElementById('listaExpArg');
  
-  const clubExpPsg = lista.map((experienciaPsg) => `  
-    <li>${experienciaPsg.infoAgregar}<a href="${experienciaPsg.pagRef}" target="_blank" class="ref fw-bold"> ${experienciaPsg.infoCompl} </a><strong> ${experienciaPsg.datoImportante} </strong></li>
+  const clubExpArg = lista.map((experienciaArg) => `  
+    <li>${experienciaArg.infoAgregar}<a href="${experienciaArg.pagRef}" target="_blank" class="ref fw-bold"> ${experienciaArg.infoCompl} </a><strong> ${experienciaArg.datoImportante} </strong></li>
     `
   );
 
-  listaExpPsg.innerHTML = clubExpPsg.join("");
+  listaExpArg.innerHTML = clubExpArg.join("");
 }
 
-listaExpPsg()
+listaExpArgentina()
