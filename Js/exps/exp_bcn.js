@@ -4,7 +4,7 @@ const agregarInfoExpBarc = () => {
   const datoImportante = document.getElementById('dato-impClub').value;
   const infoCompl = document.getElementById('infoComplementariaClub').value;
   
-  if(infoAgregar == "" || infoCompl == "") {
+  if(infoAgregar == "") {
     return false
   }
   

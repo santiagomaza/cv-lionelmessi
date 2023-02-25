@@ -1,71 +1,3 @@
-const mostrarForm = () => {
-  const selecCat = document.getElementById('catCV');
-
-  if("infPers" == selecCat.value){
-    document.getElementById('inputs').innerHTML = `
-   <form class="row g-3 needs-validation" novalidate>  
-    <div class="col-md-12">
-        <label for="exampleFormControlTextarea1" class="form-label">Información a agregar</label>
-        <textarea class="form-control" id="info-a-agregar" rows="2" required></textarea>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
-      <div class="invalid-feedback">Complete este campo por favor</div>
-    </div>
-    <div class="col-md-6">
-      <label for="validationCustom01" class="form-label">Página de referencia</label>
-      <input autocomplete="off" type="text" class="form-control" id="pag-ref">
-    </div>
-    <div class="col-md-6">
-      <label for="exampleFormControlTextarea2" class="form-label">Informacion a agregar</label>
-      <textarea class="form-control" autocomplete="off" id="infoComplementaria" rows="1" required></textarea>
-    </div>
-    <div class="col-md-12">
-      <label for="validationCustom01" class="form-label">Dato a resaltar (Si es que es relevante)</label>
-      <input autocomplete="off" type="text" class="form-control w-25" id="dato-imp">
-    </div>
-    <div class="modal-footer mt-3">
-      <button type="submit" class="btn btn-success" onclick="agregarInfo()">Agregar Información</button>
-      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-    </div> 
-   </form>
-    `
-  }
-  else if("exp" == selecCat.value){
-    document.getElementById('inputs').innerHTML = `
-    <form class="row g-3 needs-validation" novalidate>
-     <div class="col-md-6">
-      <label for="validationCustom01" class="form-label">Club / Selección</label>
-      <select class="form-select" id="expCV" onchange="expClubesOpc()" required>
-        <option selected disabled value="">Elegir club / selección</option>
-        <option value="Barc">F.C. Barcelona</option>
-        <option value="Psg">Paris Saint-Germain</option>
-        <option value="Arg">Selección Argentina</option>
-      </select>
-     </div>
-    </form>
-    <div id="inputs2" class="row g-3 d-flex"></div>
-    `
-  }
-  else{
-    document.getElementById('inputs').innerHTML = `
-     <form class="row g-3 needs-validation" novalidate>
-       <div class="col-md-12">
-         <label for="validationCustom01" class="form-label">Ingresar la habilidad</label>
-         <input autocomplete="off" type="text" class="form-control" id="ingHab" required>
-         <div class="invalid-feedback">
-           Complete este campo por favor
-         </div>
-       </div>
-       <div class="modal-footer mt-3">
-         <button type="submit" class="btn btn-success" onclick="agregarHab()">Agregar Habilidad</button>
-         <button type="reset" class="btn btn-danger" data-bs-dismiss="modal" data-bs-target="#exampleModal" aria-label="Close">Cerrar</button>
-       </div>   
-     </form>
-    `
-  }
-}
-
 const expClubesOpc = () => {
   const expCV = document.getElementById('expCV');
 
@@ -87,7 +19,7 @@ const expClubesOpc = () => {
      </div>
      <div class="col-md-6">
       <label for="validateCustom01" class="form-label">Info a agregar</label>
-      <textarea class="form-control" autocomplete="off" id="infoComplementariaClub" rows="1" required></textarea>
+      <textarea class="form-control" autocomplete="off" id="infoComplementariaClub" rows="1"></textarea>
      </div>
      <div class="col-md-12">
       <label for="validationCustom01" class="form-label">Dato a resaltar (Si es que es relevante)</label>
@@ -165,6 +97,7 @@ const expClubesOpc = () => {
 }
 
 
+
 const agregarHab = () => {
   const habilidad = document.getElementById('ingHab').value;
 
@@ -203,3 +136,21 @@ const listaHab = async () => {
 }
 
 listaHab()
+
+
+(() => {
+  'use strict'
+
+  const forms = document.querySelectorAll('.needs-validation')
+
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()

@@ -1,37 +1,98 @@
 {
   "barcelona": [
     {
-      "infoAgregar": "d´wqkop",
-      "pagRef": "sdqw",
-      "datoImportante": "w",
-      "infoCompl": "sf",
-      "id": 1
-    }
-  ],
-  "psg": [
-    {
-      "infoAgregar": "{as,d",
-      "pagRef": "pwqkdqp",
-      "datoImportante": "11",
-      "infoCompl": " ksc",
+      "infoAgregar": "Máximo goleador de la historia del club",
+      "pagRef": "",
+      "datoImportante": "",
+      "infoCompl": "",
       "id": 1
     },
     {
-      "infoAgregar": "qwdmp",
-      "pagRef": "ef",
-      "datoImportante": "sds",
-      "infoCompl": "242",
+      "infoAgregar": "Jugador extranjero con más partidos en la historia del club",
+      "pagRef": "",
+      "datoImportante": "",
+      "infoCompl": "",
       "id": 2
-    }
-  ],
-  "argentina": [
+    },
     {
-      "infoAgregar": "kasdjsapo",
-      "pagRef": "dksal1",
-      "datoImportante": "313",
-      "infoCompl": "klsdm",
-      "id": 1
+      "infoAgregar": "Máximo goleador de",
+      "pagRef": "https://es.wikipedia.org/wiki/Primera_Divisi%C3%B3n_de_Espa%C3%B1a",
+      "datoImportante": "",
+      "infoCompl": "La Liga",
+      "id": 3
+    },
+    {
+      "infoAgregar": "Máximo asistente de la historia de ",
+      "pagRef": "https://es.wikipedia.org/wiki/Primera_Divisi%C3%B3n_de_Espa%C3%B1a",
+      "datoImportante": "",
+      "infoCompl": "La Liga",
+      "id": 5
+    },
+    {
+      "infoAgregar": "Máximo goleador en una liga",
+      "pagRef": "",
+      "datoImportante": "(50 goles en la temporada 2011-2012)",
+      "infoCompl": "",
+      "id": 6
+    },
+    {
+      "infoAgregar": "Campeón de ",
+      "pagRef": "https://es.wikipedia.org/wiki/Primera_Divisi%C3%B3n_de_Espa%C3%B1a",
+      "datoImportante": "(x10)",
+      "infoCompl": "La Liga",
+      "id": 7
+    },
+    {
+      "infoAgregar": "Campeón de",
+      "pagRef": "https://es.wikipedia.org/wiki/Copa_del_Rey",
+      "datoImportante": "(x7)",
+      "infoCompl": "Copa del Rey",
+      "id": 8
+    },
+    {
+      "infoAgregar": "Campeón de",
+      "pagRef": "https://es.wikipedia.org/wiki/Copa_Catalu%C3%B1a",
+      "datoImportante": "(x4)",
+      "infoCompl": "Copa Cataluña",
+      "id": 9
+    },
+    {
+      "infoAgregar": "Campeón de ",
+      "pagRef": "https://es.wikipedia.org/wiki/Copa_Mundial_de_Clubes_de_la_FIFA",
+      "datoImportante": "(x3)",
+      "infoCompl": "Mundial de Clubes de la FIFA",
+      "id": 10
+    },
+    {
+      "infoAgregar": "Campeón de",
+      "pagRef": "https://es.wikipedia.org/wiki/Supercopa_de_Espa%C3%B1a",
+      "datoImportante": "(x8)",
+      "infoCompl": "Supercopa de España",
+      "id": 11
+    },
+    {
+      "infoAgregar": "Campeón de ",
+      "pagRef": "https://es.wikipedia.org/wiki/Liga_de_Campeones_de_la_UEFA",
+      "datoImportante": "(x4)",
+      "infoCompl": "Liga de Campeones de la UEFA",
+      "id": 12
+    },
+    {
+      "infoAgregar": "Campeón de ",
+      "pagRef": "https://es.wikipedia.org/wiki/Supercopa_de_la_UEFA",
+      "datoImportante": "(x3)",
+      "infoCompl": "Supercopa de Europa",
+      "id": 13
+    },
+    {
+      "infoAgregar": "Campeón de ",
+      "pagRef": "https://es.wikipedia.org/wiki/Supercopa_de_Catalu%C3%B1a",
+      "datoImportante": "(x2)",
+      "infoCompl": "Supercopa de Cataluña",
+      "id": 14
     }
   ],
+  "psg": [],
+  "argentina": [],
   "habilidades": {}
 }
