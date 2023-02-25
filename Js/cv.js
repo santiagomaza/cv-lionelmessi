@@ -1,3 +1,6 @@
+
+
+
 const expClubesOpc = () => {
   const expCV = document.getElementById('expCV');
 
@@ -81,11 +84,11 @@ const expClubesOpc = () => {
      </div>
      <div class="col-md-6">
       <label for="validateCustom01" class="form-label">Info a agregar</label>
-      <textarea class="form-control" autocomplete="off" id="infoComplementariaClub" rows="1" required></textarea>
+      <textarea class="form-control" autocomplete="off" id="infoComplementariaClub" rows="1"></textarea>
      </div>
      <div class="col-md-12">
       <label for="validationCustom01" class="form-label">Dato a resaltar (Si es que es relevante)</label>
-      <input autocomplete="off" type="text" class="form-control w-25" id="dato-impClub">
+      <input autocomplete="off" type="text" class="form-control w-50" id="dato-impClub">
      </div>
      <div class="modal-footer mt-3">
       <button type="submit" class="btn btn-success" onclick="agregarInfoExpArgentina()">Agregar Experiencia</button>

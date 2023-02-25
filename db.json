@@ -92,7 +92,114 @@
       "id": 14
     }
   ],
-  "psg": [],
-  "argentina": [],
+  "psg": [
+    {
+      "infoAgregar": "Campeón de",
+      "pagRef": "https://es.wikipedia.org/wiki/Ligue_1",
+      "datoImportante": "(x1)",
+      "infoCompl": "Ligue 1",
+      "id": 1
+    },
+    {
+      "infoAgregar": "Campeón de",
+      "pagRef": "https://es.wikipedia.org/wiki/Supercopa_de_Francia",
+      "datoImportante": "(x1)",
+      "infoCompl": "Supercopa de Francia",
+      "id": 2
+    }
+  ],
+  "argentina": [
+    {
+      "infoAgregar": "Más partidos disputados (172 encuentros)",
+      "pagRef": "",
+      "datoImportante": "",
+      "infoCompl": "",
+      "id": 1
+    },
+    {
+      "infoAgregar": "Más partidos disputados en",
+      "pagRef": "https://es.wikipedia.org/wiki/Clasificaci%C3%B3n_de_Conmebol_para_la_Copa_Mundial_de_F%C3%BAtbo",
+      "datoImportante": "(60 encuentros)",
+      "infoCompl": "Eliminatorias Sudamericanas",
+      "id": 2
+    },
+    {
+      "infoAgregar": "Más partidos disputados en",
+      "pagRef": "https://es.wikipedia.org/wiki/Copa_Am%C3%A9rica",
+      "datoImportante": "(34 encuentros)",
+      "infoCompl": "Copa América",
+      "id": 3
+    },
+    {
+      "infoAgregar": "Más partidos disputados en",
+      "pagRef": "https://es.wikipedia.org/wiki/Copa_Mundial_de_F%C3%BAtbol",
+      "datoImportante": "(25 encuentros)",
+      "infoCompl": "Copa Mundial de la FIFA",
+      "id": 4
+    },
+    {
+      "infoAgregar": "Máximo goleador historico",
+      "pagRef": "",
+      "datoImportante": "(98 goles)",
+      "infoCompl": "",
+      "id": 5
+    },
+    {
+      "infoAgregar": "Máximo goleador en Copa Mundial de la FIFA",
+      "pagRef": "",
+      "datoImportante": "(13 goles)",
+      "infoCompl": "",
+      "id": 6
+    },
+    {
+      "infoAgregar": "Máximo goleador en Eliminatorias Sudamericanas",
+      "pagRef": "",
+      "datoImportante": "(28 goles)",
+      "infoCompl": "",
+      "id": 7
+    },
+    {
+      "infoAgregar": "Máximo asistente",
+      "pagRef": "",
+      "datoImportante": "(53 asistencias)",
+      "infoCompl": "",
+      "id": 8
+    },
+    {
+      "infoAgregar": "Campeón de",
+      "pagRef": "https://es.wikipedia.org/wiki/Copa_Mundial_de_F%C3%BAtbol_Sub-20",
+      "datoImportante": "(x1)",
+      "infoCompl": "Copa Mundial Sub-20",
+      "id": 9
+    },
+    {
+      "infoAgregar": "Campeón de",
+      "pagRef": "https://es.wikipedia.org/wiki/Juegos_Ol%C3%ADmpicos_de_Pek%C3%ADn_2008",
+      "datoImportante": "(x1)",
+      "infoCompl": "Juegos Olímpicos Pekin 2008",
+      "id": 10
+    },
+    {
+      "infoAgregar": "Campeón de",
+      "pagRef": "https://es.wikipedia.org/wiki/Copa_Am%C3%A9rica",
+      "datoImportante": "(x1)",
+      "infoCompl": "Copa América",
+      "id": 11
+    },
+    {
+      "infoAgregar": "Campeón de",
+      "pagRef": "https://es.wikipedia.org/wiki/Copa_de_Campeones_Conmebol-UEFA",
+      "datoImportante": "(x1)",
+      "infoCompl": "Copa de Campeones CONMEBOL-UEFA",
+      "id": 12
+    },
+    {
+      "infoAgregar": "Campeón de",
+      "pagRef": "https://es.wikipedia.org/wiki/Copa_Mundial_de_F%C3%BAtbol",
+      "datoImportante": "(x1)",
+      "infoCompl": "Copa Mundial de la FIFA",
+      "id": 13
+    }
+  ],
   "habilidades": {}
 }
