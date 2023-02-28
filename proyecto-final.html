@@ -11,62 +11,44 @@
 </head>
 <body>
   <main>
-    <section class="container-fluid">
-     <div class="solapa">
-      <img src="img/messi-argentina.jpg" alt="Lionel Messi con la camiseta de la Selección Argentina" class="img" >
-      <span class="d-flex align-items-center fs-2 nombre fw-bold">Lionel Messi</span>
-      <div class="redes d-flex flex-column">
-        <span class="mt-4 mx-3 fs-5"><i class="bi bi-facebook text-white"></i><a href="https://www.facebook.com/leomessi" target="_blank" class="links_redes">Facebook</a></span>
-        <span class="mt-4 mx-3 fs-5"><i class="bi bi-instagram text-white"></i><a href="https://www.instagram.com/leomessi/" target="_blank" class="links_redes">Instagram</a></span>
-        <span class="mt-4 mx-3 fs-5"><i class="bi bi-globe text-white"></i><a href="https://messi.com/" target="_blank" class="links_redes">Pagina Web Oficial</a></span>
+    <section class="container-fluid" id="caja_cv">
+     <div class="solapa container">
+      <div class="row">
+        <img src="img/messi-argentina.jpg" alt="Lionel Messi con la camiseta de la Selección Argentina col-lg-12 col-md-12 col-sm-12" class="img" >
+        <span class="d-flex align-items-center fs-2 nombre fw-bold col-lg-12 col-md-6 col-sm-12">Lionel Messi</span>
+        <div class="redes d-flex flex-column">
+          <span class="mt-4 mx-3 fs-5"><i class="bi bi-facebook text-white"></i><a href="https://www.facebook.com/leomessi" target="_blank" class="links_redes">Facebook</a></span>
+          <span class="mt-4 mx-3 fs-5"><i class="bi bi-instagram text-white"></i><a href="https://www.instagram.com/leomessi/" target="_blank" class="links_redes">Instagram</a></span>
+          <span class="mt-4 mx-3 fs-5 col-12 col-md-12 col-sm-12"><i class="bi bi-globe text-white"></i><a href="https://messi.com/" target="_blank" class="links_redes pwo">Pagina Web Oficial</a></span>
+        </div>
       </div>
      </div>
      <section class="cuerpo">
        <div class="position-absolute mx-5">
-        <i class="bi bi-person-vcard-fill fs-2"></i>
-        <span class="categorias fs-2">Información Personal</span>
+        <i class="bi bi-person-vcard-fill iconoInf"></i>
+        <span class="categorias spanInf">Información Personal</span>
        </div>
-       <div class="d-flex flex-row-reverse mx-5 mt-4">
-        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal3">Agregar Información Personal</button>
-        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel3">Agregar Información Personal</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
-       </div>
-       <div class="mx-5">
-         <ul class="fs-6 mb-2 mt-3">
-          <li><u>Nombre Completo</u>: Lionel Andrés Messi Cuccitini</li>
-          <li><u>Fecha de Nacimiento</u>: 24 de Junio de 1987</li>
-          <li><u>Lugar de Nacimiento</u>: <a href="https://es.wikipedia.org/wiki/Rosario_(Argentina)" target="_blank" class="ref fw-bold">Rosario, Argentina</a></li>
-          <li><u>Residencia</u>: <a href="https://es.wikipedia.org/wiki/Par%C3%ADs" target="_blank" class="ref fw-bold">Paris, Francia</a></li>
-          <li><u>Nacionalidades</u>: Argentina, Española</li>
-          <li><u>Estado Civil</u>: Casado</li>
-          <li><u>Profesión</u>: Futbolista </li>
-          <li><u>Debut Deportivo</u>: <a href="https://es.wikipedia.org/wiki/F%C3%BAtbol_Club_Barcelona" target="_blank" class="ref fw-bold">F.C. Barcelona</a></li>
-          <li><u>Fecha de Debut</u>: 16 de Octubre de 2004</li>
-          <li><u>Club Actual</u>: <a href="https://es.wikipedia.org/wiki/Paris_Saint-Germain_Football_Club" target="_blank" class="ref fw-bold">Paris Saint-Germain F.C.</a></li>
-          <li><u>Posición</u>: Delantero, Centrocampista</li>
+       <div class="mx-5 d-inline-flex divInf">
+         <ul class="fs-6 mb-2">
+          <li class="listaInf"><u>Nombre Completo</u>: Lionel Andrés Messi Cuccitini</li>
+          <li class="listaInf"><u>Fecha de Nacimiento</u>: 24 de Junio de 1987</li>
+          <li class="listaInf"><u>Lugar de Nacimiento</u>: <a href="https://es.wikipedia.org/wiki/Rosario_(Argentina)" target="_blank" class="ref fw-bold">Rosario, Argentina</a></li>
+          <li class="listaInf"><u>Residencia</u>: <a href="https://es.wikipedia.org/wiki/Par%C3%ADs" target="_blank" class="ref fw-bold">Paris, Francia</a></li>
+          <li class="listaInf"><u>Nacionalidades</u>: Argentina, Española</li>
+          <li class="listaInf"><u>Estado Civil</u>: Casado</li>
+          <li class="listaInf"><u>Profesión</u>: Futbolista </li>
+          <li class="listaInf"><u>Debut Deportivo</u>: <a href="https://es.wikipedia.org/wiki/F%C3%BAtbol_Club_Barcelona" target="_blank" class="ref fw-bold">F.C. Barcelona</a></li>
+          <li class="listaInf"><u>Fecha de Debut</u>: 16 de Octubre de 2004</li>
+          <li class="listaInf"><u>Club Actual</u>: <a href="https://es.wikipedia.org/wiki/Paris_Saint-Germain_Football_Club" target="_blank" class="ref fw-bold">Paris Saint-Germain F.C.</a></li>
+          <li class="listaInf"><u>Posición</u>: Delantero, Centrocampista</li>
          </ul>
        </div>
        <div class="w-100 d-flex justify-content-center mb-2 mt-4">
         <div class="border border-secondary w-50 opacity-25 position-absolute d-flex justify-content-center"></div>
        </div>
        <div class="position-absolute mx-5">
-         <i class="bi bi-star-fill fs-2"></i>
-         <span class="categorias fs-2">Experiencia</span>
+         <i class="bi bi-star-fill exp"></i>
+         <span class="categorias exp">Experiencia</span>
        </div>
        <div class="d-flex flex-row-reverse mx-5 mt-3">         
          <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar Experiencia</button>
@@ -81,7 +63,7 @@
                 <form class="row needs-validation" novalidate>
                   <div class="col-md-6">
                    <label for="validationCustom01" class="form-label">Seleccione Club o Selección</label>
-                   <select class="form-select" id="expCV" onchange="expClubesOpc()">
+                   <select class="form-select" id="expCV">
                      <option selected disabled value="">Elegir club/selección</option>            
                      <option value="Barc">F.C. Barcelona</option>            
                      <option value="Psg">Paris Saint-Germain</option>            
@@ -98,33 +80,33 @@
        <div class="mx-5">
          <div class="d-flex mt-4">         
            <img src="img/barcelona-logo.png" alt="Escudo Futbol Club Barcelona" class="escudos">
-           <h5 class="fs-4 mx-3 mt-1">F.C. Barcelona (2004 - 2021)</h5>
+           <h5 class="fuenteNombreClub mx-3 mt-1">F.C. Barcelona (2004 - 2021)</h5>
          </div>
         <article class="mt-3 mb-4">
           <div class="d-flex">
-           <ul class="fs-6" id="listaExpBarc"> 
+           <ul class="fuenteAlturaExp" id="listaExpBarc"> 
            </ul>
         </article>
        </div>
        <div class="mx-5">
         <div class="d-flex">
           <img src="img/paris-saint-germain-logo.png" alt="Escudo Paris Saint-Germain" class="escudos">          
-          <h5 class="fs-4 mx-3 mt-2">Paris Saint-Germain (2021 - Actualidad)</h5>
+          <h5 class="fuenteNombreClub mx-3 mt-2">Paris Saint-Germain (2021 - Actualidad)</h5>
         </div>
         <article class="mt-3 mb-4">
           <div class="d-flex">
-           <ul class="fs-6" id="listaExpPsg"> 
+           <ul class="fuenteAlturaExp" id="listaExpPsg"> 
            </ul>
         </article>
        </div>
        <div class="mx-5">
         <div class="d-flex">
           <img src="img/logo-seleccion-argentina.png" alt="Escudo Selección Argentina de Futbol" width="55px" height="70px">         
-          <h5 class="mt-4 fs-4 mx-3">Selección Argentina (2005 - Actualidad)</h5>
+          <h5 class="mt-4 fuenteNombreClub mx-3">Selección Argentina (2005 - Actualidad)</h5>
         </div>
         <article class="mt-3 mb-4">
           <div class="d-flex">
-           <ul class="fs-6" id="listaExpArg"> 
+           <ul class="fuenteAlturaExp" id="listaExpArg"> 
            </ul>
         </article>
        </div>
@@ -145,12 +127,18 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
+                <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-12">
+                    <label for="validationCustom01" class="form-label">Habilidad</label>
+                    <input autocomplete="off" type="text" class="form-control" id="ingHab" required>
+                    <div class="invalid-feedback">Completar este campo por favor</div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" onclick="agregarHab()">Agregar Habilidad</button>
+                    <button type="reset" class="btn btn-danger" data-bs-dismiss="modal" >Cerrar</button>
+                  </div>
+                </form>
+              </div> 
             </div>
           </div>
         </div>
@@ -158,7 +146,8 @@
        <div class="mx-5">
          <article class="mt-3 mb-4">
           <div class="d-flex">
-            <ul class="fs-5" id="listaHab"></ul>
+            <ul class="fs-6" id="listaHab">
+            </ul>
           </div>
          </article>
        </div>

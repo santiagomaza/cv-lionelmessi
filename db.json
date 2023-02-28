@@ -1,4 +1,5 @@
 {
+  "infpers": [],
   "barcelona": [
     {
       "infoAgregar": "Máximo goleador de la historia del club",
@@ -201,5 +202,7 @@
       "id": 13
     }
   ],
-  "habilidades": {}
+  "habilidades": [
+    
+  ]
 }
