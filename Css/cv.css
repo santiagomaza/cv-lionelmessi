@@ -5,7 +5,7 @@ body{
 #caja_cv{
   margin: auto;
   margin-top: 30px;
-  height: 2100px;
+  height: 2000px;
   width: 1000px;
   border: 2px solid black;
 }
@@ -77,12 +77,9 @@ body{
 }
 
 .clasifHab{
-  margin-left: 145px;
+  margin-left: 215px;
 }
 
-.boton-dltHab{
-  margin-left: 180px;
-}
 
 @media (min-width: 200px) and (max-width: 489.98px){
   #caja_cv{

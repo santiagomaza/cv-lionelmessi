@@ -134,10 +134,7 @@ const listaHab = async () => {
        <div class="position-absolute">
         ${habilidad.habilidad}
        </div>
-       <div class="d-flex flex-row-reverse">
-        <button class="btn btn-danger boton-dltHab mb-2" onclick="borrarHabilidad(${habilidad.id})">
-         <i class="bi bi-trash2-fill"></i>
-        </button>       
+       <div class="d-flex flex-row-reverse">      
         <strong class="px-5 flex-row-reverse clasifHab">${habilidad.calHab}</strong>
        </div>
       </li>
@@ -147,9 +144,3 @@ const listaHab = async () => {
     listaHab.innerHTML = habilidades.join("");
 }
 listaHab()
-
-const borrarHabilidad = async (id) => {
-  await fetch(`http://localhost:3000/habilidades/${id}`, {
-    method: "DELETE"
-  })
-}
