@@ -41,6 +41,7 @@
           <li class="listaInf"><u>Fecha de Debut</u>: 16 de Octubre de 2004</li>
           <li class="listaInf"><u>Club Actual</u>: <a href="https://es.wikipedia.org/wiki/Paris_Saint-Germain_Football_Club" target="_blank" class="ref fw-bold">Paris Saint-Germain F.C.</a></li>
           <li class="listaInf"><u>Posición</u>: Delantero, Centrocampista</li>
+          <li class="listaInf"><u>Pierna Habil</u>: Izquierda</li>
          </ul>
        </div>
        <div class="w-100 d-flex justify-content-center mb-2 mt-4">
@@ -63,7 +64,7 @@
                 <form class="row needs-validation" novalidate>
                   <div class="col-md-6">
                    <label for="validationCustom01" class="form-label">Seleccione Club o Selección</label>
-                   <select class="form-select" id="expCV">
+                   <select class="form-select" id="expCV" onchange="expClubesOpc()">
                      <option selected disabled value="">Elegir club/selección</option>            
                      <option value="Barc">F.C. Barcelona</option>            
                      <option value="Psg">Paris Saint-Germain</option>            
@@ -114,8 +115,8 @@
         <div class="border border-secondary w-50 opacity-25 position-absolute d-flex justify-content-center"></div>
        </div>
        <div class="position-absolute mx-5">
-        <i class="bi bi-person-fill-gear fs-2"></i>
-        <span class="categorias fs-2">Habilidades</span>
+        <i class="bi bi-person-fill-gear spanHab"></i>
+        <span class="categorias spanHab">Habilidades</span>
        </div>
        <div class="d-flex flex-row-reverse mx-5 mt-3">
         <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal2">Agregar Habilidad</button>
@@ -130,8 +131,18 @@
                 <form class="row g-3 needs-validation" novalidate>
                   <div class="col-md-12">
                     <label for="validationCustom01" class="form-label">Habilidad</label>
-                    <input autocomplete="off" type="text" class="form-control" id="ingHab" required>
+                    <input autocomplete="off" autocapitalize="on" minlength="12" type="text" class="form-control" id="ingHab" required>
                     <div class="invalid-feedback">Completar este campo por favor</div>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="validationCustom02" class="form-label">Elegir calificación</label>
+                    <select class="form-select" id="calHab" required>
+                      <option selected disbled value=""></option>
+                      <option value="Muy Alta">Muy Alta</option>
+                      <option value="Alta">Alta</option>
+                      <option value="Media">Media</option>
+                      <option value="Baja">Baja</option>
+                    </select>
                   </div>
                   <div class="modal-footer">
                     <button type="submit" class="btn btn-success" onclick="agregarHab()">Agregar Habilidad</button>
@@ -146,7 +157,7 @@
        <div class="mx-5">
          <article class="mt-3 mb-4">
           <div class="d-flex">
-            <ul class="fs-6" id="listaHab">
+            <ul id="listaHab">
             </ul>
           </div>
          </article>

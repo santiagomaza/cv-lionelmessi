@@ -203,6 +203,35 @@
     }
   ],
   "habilidades": [
-    
+    {
+      "habilidad": "Trabajo en equipo",
+      "calHab": "Alta",
+      "id": 1
+    },
+    {
+      "habilidad": "Comunicación ",
+      "calHab": "Media",
+      "id": 2
+    },
+    {
+      "habilidad": "Liderazgo",
+      "calHab": "Alta",
+      "id": 3
+    },
+    {
+      "habilidad": "Control de Pelota",
+      "calHab": "Muy Alta",
+      "id": 4
+    },
+    {
+      "habilidad": "Creación de jugadas",
+      "calHab": "Muy Alta",
+      "id": 5
+    },
+    {
+      "habilidad": "Pases Claves",
+      "calHab": "Muy Alta",
+      "id": 6
+    }
   ]
 }

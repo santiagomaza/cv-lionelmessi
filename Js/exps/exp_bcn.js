@@ -34,7 +34,7 @@ const listaExpBarc = async () => {
   const listaExpBarc = document.getElementById('listaExpBarc');
  
   const clubExpBarc = lista.map((experienciaBarc) => `  
-    <li>${experienciaBarc.infoAgregar}<a href="${experienciaBarc.pagRef}" target="_blank" class="ref fw-bold"> ${experienciaBarc.infoCompl} </a><strong> ${experienciaBarc.datoImportante} </strong></li>
+    <li class="listaExp">${experienciaBarc.infoAgregar}<a href="${experienciaBarc.pagRef}" target="_blank" class="ref fw-bold"> ${experienciaBarc.infoCompl} </a><strong> ${experienciaBarc.datoImportante} </strong></li>
     `
   );
 

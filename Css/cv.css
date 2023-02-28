@@ -5,7 +5,7 @@ body{
 #caja_cv{
   margin: auto;
   margin-top: 30px;
-  height: 2000px;
+  height: 2100px;
   width: 1000px;
   border: 2px solid black;
 }
@@ -62,7 +62,6 @@ body{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
 .ref{
   text-decoration: none;
   color: black;
@@ -73,63 +72,25 @@ body{
   height: 50px;
 }
 
-@media (max-width: 575.98px){
-  .pwo{
-    font-size: large;
-  }
+.spanHab{
+  font-size: 30px;
 }
 
-@media (min-width: 576px){
-  .container, .container-sm {
-    max-width: 998px;
-  }
-  
-  .spanInf{
-    font-size: 30px;
-  }
-
-  .iconoInf{
-    font-size: 30px;
-  }
-
-  .divInf{
-    margin-top: 45px;
-  }
-
-  .exp{
-    font-size: 35px;
-  }
+.clasifHab{
+  margin-left: 145px;
 }
 
-@media (min-width: 490px) and (max-width: 680px){
-  .spanInf{
-    font-size: 35px;
-  }
-
-  .iconoInf{
-    font-size: 40px;
-  }
-
-  .divInf{
-    margin-top: 60px;
-  }
-
-  .listaInf{
-    font-size: 22px;
-  }
-
-  .fuenteAlturaExp{
-    font-size: 20px;
-  }
-  
-  .exp{
-    font-size: 35px;
-  }
+.boton-dltHab{
+  margin-left: 180px;
 }
 
 @media (min-width: 200px) and (max-width: 489.98px){
   #caja_cv{
-    height: 2500px;
+    height: 3000px;
+  }
+
+  .pwo{
+    font-size: 20px;
   }
 
   .spanInf{
@@ -154,10 +115,104 @@ body{
   }
 
   .fuenteAlturaExp{
-    font-size: 27px;
+    font-size: 22px;
+  }
+  
+  .listaExp{
+    margin-bottom: 8px;
+  }
+
+  .exp{
+    font-size: 35px;
+  }
+
+  .spanHab{
+    font-size: 35px;
+  }
+
+  #listaHab{
+    font-size: 22px;
+  }
+
+  .clasifHab{
+    margin-left: 270px;
+  }
+}
+
+@media (min-width: 490px) and (max-width: 750px){
+  #caja_cv{
+    height: 2600px;
+  }
+
+  .spanInf{
+    font-size: 35px;
+  }
+
+  .iconoInf{
+    font-size: 40px;
+  }
+
+  .divInf{
+    margin-top: 60px;
+  }
+
+  .listaInf{
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  .fuenteNombreClub{
+    font-size: 30px;
+  }
+
+  .fuenteAlturaExp{
+    font-size: 20px;
+    
   }
   
   .exp{
     font-size: 35px;
+  }
+
+  .listaExp{
+    margin-bottom: 5px;
+  }
+
+  .spanHab{
+    font-size: 35px;
+  }
+
+  #listaHab{
+    font-size: 22px;
+  }
+
+  .clasifHab{
+    margin-left: 270px;
+  }
+}
+
+@media (min-width: 576px){
+  .container, .container-sm {
+    max-width: 998px;
+  }
+  
+  .spanInf{
+    font-size: 30px;
+  }
+
+  .iconoInf{
+    font-size: 30px;
+  }
+
+  .divInf{
+    margin-top: 45px;
+  }
+
+  .exp{
+    font-size: 30px;
+  }
+
+  .spanHab{
+    font-size: 30px;
   }
 }
