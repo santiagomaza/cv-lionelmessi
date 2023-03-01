@@ -11,10 +11,10 @@ Una vez instalado la dependencia, se crea una base de datos **db.json**  para po
 **NOTA IMPORTANTE: ** Al levantar el html los datos se verán vacíos. 
 
 Para levantar la base de datos se pueden utilizar dos comandos:
-                   1. json-server --watch db.json
+                     json-server --watch db.json
 
 O bien
-                    1.  json-server db.json
+                     json-server db.json
 
 Una vez leventada la base de datos, ahora podrá trabajar con json-server.
 
