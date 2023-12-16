@@ -8,7 +8,7 @@ const agregarInfoExpArgentina = () => {
     return false
   }
   
-  fetch('http://localhost:3000/argentina', {
+  fetch('https://cvmessi.onrender.com/argentina', {
     method: 'POST',
     body: JSON.stringify({
       infoAgregar,
@@ -23,7 +23,7 @@ const agregarInfoExpArgentina = () => {
 }
 
 const obtenerListaExpArgentina = async() => {
-  const resultados = await fetch('http://localhost:3000/argentina');
+  const resultados = await fetch('https://cvmessi.onrender.com/argentina');
   const listaExp = await resultados.json();
   return listaExp;
 }

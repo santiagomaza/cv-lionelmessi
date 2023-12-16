@@ -8,7 +8,7 @@ const agregarInfoExpPsg = () => {
     return false
   }
   
-  fetch('http://localhost:3000/psg', {
+  fetch('https://cvmessi.onrender.com/psg', {
     method: 'POST',
     body: JSON.stringify({
       infoAgregar,
@@ -23,7 +23,7 @@ const agregarInfoExpPsg = () => {
 }
 
 const obtenerListaExpPsg = async() => {
-  const resultados = await fetch('http://localhost:3000/psg');
+  const resultados = await fetch('https://cvmessi.onrender.com/psg');
   const listaExp = await resultados.json();
   return listaExp;
 }

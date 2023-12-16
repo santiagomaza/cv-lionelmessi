@@ -1,29 +1,19 @@
-const agregarInfoExpBarc = () => {
-  const infoAgregar = document.getElementById('info-a-agregarClub').value;
-  const pagRef = document.getElementById('pag-refClub').value;
-  const datoImportante = document.getElementById('dato-impClub').value;
-  const infoCompl = document.getElementById('infoComplementariaClub').value;
+const agregarInfoExpBarc = async (data) => {
   
-  if(infoAgregar == "") {
-    return false
-  }
-  
-  fetch('http://localhost:3000/barcelona', {
+  const respuesta = await fetch('https://cvmessi.onrender.com/barcelona', {
     method: 'POST',
-    body: JSON.stringify({
-      infoAgregar,
-      pagRef,
-      datoImportante,
-      infoCompl,
-    }),
+    body: JSON.stringify(data),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
   });
+
+  const json = await respuesta.json();
+  console.log(json);
 }
 
 const obtenerListaExpBarc = async() => {
-  const resultados = await fetch('http://localhost:3000/barcelona');
+  const resultados = await fetch('https://cvmessi.onrender.com/barcelona');
   const listaExp = await resultados.json();
   return listaExp;
 }
